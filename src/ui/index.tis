@@ -82,7 +82,7 @@ class ConnectStatus: Reactor.Component {
             return translate('connecting_status');
         }
         if (!handler.using_public_server()) return translate('Ready');
-        return <span>{translate("Ready")}, <span .link #setup-server>{translate("setup_server_tip")}</span></span>;
+        return <span>{translate("Ready")}</span>;
     }
 
     event click $(#start-service) () {
@@ -743,7 +743,6 @@ class InstallMe: Reactor.Component {
     function render() {
         return <div .install-me>
             <span />
-            <div>{translate('install_tip')}</div>
             <div><button #install-me .button>{translate('Install')}</button></div>
         </div>;
     }
